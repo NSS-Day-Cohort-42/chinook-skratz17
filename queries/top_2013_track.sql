@@ -10,5 +10,5 @@ FROM (
   JOIN Invoice i
   ON il.InvoiceId = i.InvoiceId
   WHERE i.InvoiceDate >= '2013-01-01' AND i.invoiceDate <= '2013-12-31'
-  GROUP BY t.TrackId;
+  GROUP BY t.TrackId
 );
