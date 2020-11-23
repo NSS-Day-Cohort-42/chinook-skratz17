@@ -1,7 +1,7 @@
 /*
 Provide a query that shows the top 5 most purchased tracks over all.
 */
-SELECT t.Name, COUNT(*) as PurchaseCount
+SELECT t.Name, SUM(il.Quantity) as PurchaseCount
 FROM Track t
 JOIN InvoiceLine il
 ON il.TrackId = t.TrackId
